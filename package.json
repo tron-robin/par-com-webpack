@@ -1,0 +1,35 @@
+{
+  "name": "par-com-webpack",
+  "version": "1.0.0",
+  "description": "webpack对代码、字体、图片的解析和压缩",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "scss-loader": "0.0.1",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-clean-plugin": "^0.2.3",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tron-robin/par-com-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tron-robin/par-com-webpack/issues"
+  },
+  "homepage": "https://github.com/tron-robin/par-com-webpack#readme"
+}
