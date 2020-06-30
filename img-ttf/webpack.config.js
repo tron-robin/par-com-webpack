@@ -1,30 +1,36 @@
 const path = require('path');
 const webpackCleanPlugin = require('webpack-clean-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-    entry:'./index.js',
-    output:{
-        filename:'index.js',
-        path:path.resolve(__dirname,'./web')
+    entry: './index.js',
+    output: {
+        filename: 'index.js',
+        path: path.resolve(__dirname, './web')
     },
-    module:{
-        rules:[
+    module: {
+        rules: [
             {
-                test:/\.css$/,
-                loader:['style-loader','css-loader']
+                test: /\.css$/,
+                loader: [
+                    miniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
             },
             {
-                test:/\.(jpg|ttf)$/,
-                loader:'url-loader'
+                test: /\.(jpg|ttf)$/,
+                loader: 'url-loader'
             }
         ]
     },
-    plugins:[
+    plugins: [
         new webpackCleanPlugin(),
         new htmlWebpackPlugin({
-            filename:'index.html',
-            template:'./index.html'
-        })
+            template: './index.html'
+        }),
+        new miniCssExtractPlugin(),
+        new OptimizeCSSAssetsPlugin()
     ]
 }

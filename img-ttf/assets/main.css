@@ -1,4 +1,4 @@
-@font-face{
+/* @font-face{
     font-family: 'font';
     src: url(./font_1078604_w4kpxh0rafi.ttf);
 }
@@ -9,9 +9,9 @@
 }
 .ali:before{
     content: "\e636";
-}
+} */
 .bg{
-    background-image: url(./wechat.jpg);
+    /* background-image: url(./wechat.jpg); */
     background-color: red;
     background-repeat: no-repeat;
     background-position: 100% center;
